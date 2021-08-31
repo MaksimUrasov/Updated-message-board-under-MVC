@@ -1,0 +1,147 @@
+:root {
+    --dark_brown: rgb(90, 56, 6);
+    --light_brown: #fff3e6;
+    --normal_brown: #fde6cb;
+    /* --white: #ffffff; */
+  }
+
+body {
+    color: var(--dark_brown);
+    width: 100%;
+    
+}
+
+.content {
+    background-color: var(--normal_brown);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.1vw 3vw 3vw 3vw;
+}
+
+p{
+    margin:0;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+    margin: auto;
+}
+
+.mandatory_notice, .error_message {
+    font-size: small;
+    margin-top: 1vw;
+}
+
+#server_error_message, noscript {
+    color:red;
+}
+
+#server_success_message{
+    color:green;
+}
+
+#container_for_old_messages{
+    border:var(--dark_brown) 1px solid;
+    margin-top: 1vw;    
+}
+
+.container_for_one_old_message{
+    padding:0.4vw 0.2vw 0.4vw 0.2vw;
+}
+
+.container_for_one_old_message:nth-child(even) {
+    background-color: var(--light_brown);
+}
+
+.name_and_year_container{
+    display: flex;
+    font-style: italic;
+    gap:0.4vw; /* this one gives a spave between the name and age blocks  */
+}
+
+#name_for_message_container{
+    padding:0.4vw 0.4vw 0.4vw 0.4vw;
+    font-weight: bold;
+}
+
+.pages_container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page_links_container {
+    display: flex;
+    justify-content:center;
+}
+.page_links_container > p {
+    padding: 0.2vw;
+}
+
+
+
+
+/* spinner css is below */
+.lds-facebook {
+    /* display: inline-block; */
+    position: relative;
+    width: 60px;
+    height: 60px;
+    
+    
+    /*  display: block;    this one (together with width property) is necessary for margin: auto to work. I will add it */
+    margin: auto;
+    display: none;
+}
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #fff;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+@keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+}
+  
+
+
+/* below I have some classes that will be added or removed by JS dynamically. Maybe can use them by PHP too? */
+.red {
+    color:red;
+    font-size: 100%;
+}
+
+.green {
+    border-color: green;
+     
+}
+
+.hide {
+    display: none;
+}
